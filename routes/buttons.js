@@ -2,11 +2,34 @@ var express = require('express');
 var router = express.Router();
 var myConfig = require('../config');
 
-/* GET users listing. */
+
 router.get('/', function(req, res, next) {
-  res.send(JSON.stringify(myConfig));
+    let copyConfig = JSON.parse(JSON.stringify(myConfig));
+
+
+    for (let button in copyConfig) {
+        copyConfig[button] = myConfig[button].status();
+        // if (myConfig.hasOwnProperty(button)) {
+        //     button.stop();
+        // }
+    }
+
+
+  res.send(JSON.stringify(copyConfig));
 });
 
+
+router.get('/all/status/stop', function (req, res, next) {
+
+    for (let button in myConfig) {
+        myConfig[button].stop();
+        // if (myConfig.hasOwnProperty(button)) {
+        //     button.stop();
+        // }
+    }
+
+    res.send(JSON.stringify(myConfig));
+});
 
 
 router.get('/:id', function (req, res, next) {
@@ -62,6 +85,7 @@ router.get('/:id/status/stop', function (req, res, next) {
 
     res.send(JSON.stringify(button.activePin));
 });
+
 
 
 module.exports = router;

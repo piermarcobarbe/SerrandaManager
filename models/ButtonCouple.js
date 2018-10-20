@@ -26,9 +26,16 @@ function ButtonCouple(pinUp, pinDown) {
         }
     };
 
+    this.status = function(){
+        if(this.activePin === this.pinDown) return "down";
+        if(this.activePin === this.pinUp) return "up";
+        if(this.activePin === 0) return "";
+    };
+
     this.stop = function () {
         this.activePin= 0;
     };
+
 
 }
 
