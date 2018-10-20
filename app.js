@@ -10,7 +10,12 @@ var myConfig = require('./config');
 
 var app = express();
 
-app.use(logger('dev'));
+// app.use(logger(':method :url (:remote-addr) ~ :status ~ :response-time ms'));
+
+app.use(logger(':remote-addr, :status - [:date[clf]] ":method :url" (:referrer)'));
+
+
+// app.use(logger('combined'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
