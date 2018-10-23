@@ -73,6 +73,28 @@ ReflectStatus = function(){
 
             console.log(myConfig);
 
+            for(let button in myConfig){
+
+
+
+                if(myConfig[button] === "up"){
+
+                    console.log(button + " is up")
+
+                    let jQuerySelector = "div[data-buttonGroup="+ button +"]" + " button " + myConfig[button];
+                    let button = $(jQuerySelector);
+
+                } else if(myConfig[button] === "down"){
+                    console.log(button + " is down")
+
+                    let jQuerySelector = "div[data-buttonGroup="+ button +"]" + " button " + myConfig[button];
+                    let button = $(jQuerySelector);
+
+                } if(myConfig[button] === "off"){
+                    console.log(button + " is off")
+                }
+            }
+
         }
     };
 
