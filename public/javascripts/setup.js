@@ -14,7 +14,12 @@ bindButtonClickEvent = function(target, targetName, HttpMethod, url){
 
         Http.onreadystatechange=function(){
 
+
+
             if(this.status === 200 && this.readyState === 4){
+                reflectStatus();
+
+
                 console.log("Request:  "+ HttpMethod +  " "+ _url +  "\nResponse: " + this.responseText);
             }
         };
@@ -55,7 +60,7 @@ bindButtons = function(){
 
 }
 
-ReflectStatus = function(){
+reflectStatus = function(){
 
     const Http = new XMLHttpRequest();
 
@@ -65,7 +70,7 @@ ReflectStatus = function(){
     Http.open(HttpMethod, window.location.href + _url);
     Http.send();
 
-    Http.onreadystatechange=function(){
+    Http.onreadystatechange = function(){
         if(this.status === 200 && this.readyState === 4){
             console.log("Request:  "+ HttpMethod +  " " + _url +  "\nResponse: " + this.responseText);
             var myConfig = this.responseText;
@@ -75,23 +80,40 @@ ReflectStatus = function(){
 
             for(let button in myConfig){
 
+                if(myConfig.hasOwnProperty(button)){
 
+                    // console.log(button);
+                    // console.log(myConfig[button]);
 
-                if(myConfig[button] === "up"){
+                    $("div[data-buttongroup="+ button +"] button.up").removeClass("active");
+                    $("div[data-buttongroup="+ button +"] button.down").removeClass("active");
 
-                    console.log(button + " is up")
+                    if(myConfig[button] === "up"){
 
-                    let jQuerySelector = "div[data-buttonGroup="+ button +"]" + " button " + myConfig[button];
-                    let button = $(jQuerySelector);
+                        console.log(button + " - " + myConfig[button]);
 
-                } else if(myConfig[button] === "down"){
-                    console.log(button + " is down")
+                        let jQuerySelector = "div[data-buttongroup="+ button +"]" + " button." + myConfig[button];
+                        console.log(jQuerySelector)
 
-                    let jQuerySelector = "div[data-buttonGroup="+ button +"]" + " button " + myConfig[button];
-                    let button = $(jQuerySelector);
+                        let buttonItem = $(jQuerySelector);
+                        console.log(buttonItem);
 
-                } if(myConfig[button] === "off"){
-                    console.log(button + " is off")
+                        buttonItem.addClass("active");
+
+                    } else if(myConfig[button] === "down"){
+                        console.log(button + " - " + myConfig[button]);
+
+                        let jQuerySelector = "div[data-buttongroup="+ button +"]" + " button." + myConfig[button];
+                        console.log(jQuerySelector)
+
+                        let buttonItem = $(jQuerySelector);
+                        console.log(buttonItem);
+                        buttonItem.addClass("active");
+
+                    } if(myConfig[button] === "off"){
+                        console.log(button + " - " + myConfig[button]);
+                        // no button is pressed, so nothing is to be reflected.
+                    }
                 }
             }
 
@@ -102,6 +124,6 @@ ReflectStatus = function(){
 
 window.onload = function () {
     bindButtons();
-    ReflectStatus();
+    reflectStatus();
 
 };
