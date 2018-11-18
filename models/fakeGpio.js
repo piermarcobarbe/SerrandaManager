@@ -24,7 +24,6 @@ class Gpio {
         if((value === 1) || (value === 0)){
             this.active = value;
             console.log("GPIO " + this._gpio + ": Changed value to " + value);
-            return this.active;
         }
         return this.active;
 
