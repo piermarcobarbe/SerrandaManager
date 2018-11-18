@@ -13,13 +13,8 @@ bindButtonClickEvent = function(target, targetName, HttpMethod, url){
         // console.log("Calling " + targetName + " to " + HttpMethod + " " + _url);
 
         Http.onreadystatechange=function(){
-
-
-
             if(this.status === 200 && this.readyState === 4){
                 reflectStatus();
-
-
                 console.log("Request:  "+ HttpMethod +  " "+ _url +  "\nResponse: " + this.responseText);
             }
         };
@@ -35,6 +30,9 @@ bindButtons = function(){
     let upButtons = $(".up");
     // console.log(upButtons);
     let downButtons = $(".down");
+
+    let upAll = document.getElementById("upAllButton");
+    let downAll = document.getElementById("downAllButton");
 
     let stopAllButton = document.getElementById("stopAllButton");
 
@@ -55,6 +53,9 @@ bindButtons = function(){
 
 
     }
+
+    bindButtonClickEvent(upAll, "upAllButton", "GET", "buttons/all/status/up");
+    bindButtonClickEvent(downAll, "downAllButton", "GET", "buttons/all/status/down");
 
     bindButtonClickEvent(stopAllButton, "stopAllButton", "GET", "buttons/all/status/stop");
 
