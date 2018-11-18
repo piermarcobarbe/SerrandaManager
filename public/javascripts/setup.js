@@ -77,6 +77,12 @@ reflectStatus = function(){
             var myConfig = this.responseText;
             myConfig = JSON.parse(myConfig);
 
+            let status = {
+                "up" : 0,
+                "down" : 0,
+                "off" : 0
+            };
+
             console.log(myConfig);
 
             for(let button in myConfig){
@@ -88,6 +94,10 @@ reflectStatus = function(){
 
                     $("div[data-buttongroup="+ button +"] button.up").removeClass("active");
                     $("div[data-buttongroup="+ button +"] button.down").removeClass("active");
+                    $("#upAllButton").removeClass("active");
+                    $("#downAllButton").removeClass("active");
+                    $("#stopAllButton").removeClass("active");
+
 
                     if(myConfig[button] === "up"){
 
@@ -101,6 +111,8 @@ reflectStatus = function(){
 
                         buttonItem.addClass("active");
 
+
+
                     } else if(myConfig[button] === "down"){
                         console.log(button + " - " + myConfig[button]);
 
@@ -111,11 +123,24 @@ reflectStatus = function(){
                         console.log(buttonItem);
                         buttonItem.addClass("active");
 
-                    } if(myConfig[button] === "off"){
+                    } else if(myConfig[button] === "off"){
                         console.log(button + " - " + myConfig[button]);
                         // no button is pressed, so nothing is to be reflected.
                     }
+                    status[myConfig[button]] += 1;
                 }
+            }
+
+            if(status["up"] === 0 && status["off"] === 0){
+                $("#downAllButton").addClass("active");
+            }
+
+            if(status["down"] === 0 && status["off"] === 0){
+                $("#upAllButton").addClass("active");
+            }
+
+            if(status["up"] === 0 && status["down"] === 0){
+                $("#stopAllButton").addClass("active");
             }
 
         }
