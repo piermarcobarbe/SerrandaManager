@@ -6,10 +6,7 @@ var myConfig = require('../config');
 router.get('/', function(req, res, next) {
 
     // console.log(myConfig);
-
-
     let copyConfig = JSON.parse(JSON.stringify(myConfig));
-
 
     for (let button in copyConfig) {
         copyConfig[button] = myConfig[button].status();
@@ -18,16 +15,35 @@ router.get('/', function(req, res, next) {
   res.send(JSON.stringify(copyConfig));
 });
 
+router.get('/all/status/up', function (req, res, next) {
+    for (let button in myConfig) {
+        if (myConfig.hasOwnProperty(button)) {
+            myConfig[button].stopAsync(function () {
+                myConfig[button].up();
+            });
+        }
+    }
+    res.send(JSON.stringify(myConfig));
+});
+
+router.get('/all/status/down', function (req, res, next) {
+    for (let button in myConfig) {
+        if (myConfig.hasOwnProperty(button)) {
+            myConfig[button].stopAsync(function () {
+                myConfig[button].down();
+            });
+        }
+    }
+    res.send(JSON.stringify(myConfig));
+});
 
 router.get('/all/status/stop', function (req, res, next) {
 
     for (let button in myConfig) {
-        myConfig[button].stop();
-        // if (myConfig.hasOwnProperty(button)) {
-        //     button.stop();
-        // }
+        if (myConfig.hasOwnProperty(button)) {
+            myConfig[button].stop();
+        }
     }
-
     res.send(JSON.stringify(myConfig));
 });
 
