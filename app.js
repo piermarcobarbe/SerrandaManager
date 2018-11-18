@@ -2,7 +2,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-//var Gpio = require('onoff').Gpio;
 
 var indexRouter = require('./routes/index');
 var buttonsRouter = require('./routes/buttons');

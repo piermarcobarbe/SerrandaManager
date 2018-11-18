@@ -1,5 +1,16 @@
 // https://www.w3schools.com/nodejs/nodejs_raspberrypi_blinking_led.asp
 
+console.log(`This platform is ${process.platform}`);
+if(process.platform === "linux"){
+    var Gpio = require('onoff').Gpio;
+} else {
+    // console.log(__dirname);
+    var Gpio = require("./fakeGpio").Gpio;
+}
+
+
+
+
 
 function ButtonCouple(identifier, pinUp, pinDown) {
 
@@ -7,29 +18,44 @@ function ButtonCouple(identifier, pinUp, pinDown) {
     if(typeof identifier !== "string") throw new Error("Identifier must be a string");
 
 
-    this.pinUp = pinUp;
-    this.pinDown = pinDown;
-    this.activePin = 0;
+    try{
+        // this.pinUp = pinUp;
+        console.log("setting up Gpio " + pinUp);
+        this.pinUp = new Gpio(pinUp, 'out');
+    } catch (e) {
+        throw e;
+    }
+
+    try {
+        console.log("setting up Gpio " + pinDown);
+        this.pinDown = new Gpio(pinDown, 'out');
+    } catch (e) {
+        throw e;
+    }
 
     this.identifier = identifier;
-
+    this.activePin = 0;
 
     this.up = function () {
         if(this.activePin === this.pinDown) return this.stop();
-        if(this.activePin === this.pinUp) return this.activePin;
+        if(this.activePin === this.pinUp) return this.activePin._gpio;
+        this.pinUp.writeSync(0);
         this.activePin = this.pinUp;
     };
 
     this.down = function () {
         if(this.activePin === this.pinUp) return this.stop();
-        if(this.activePin === this.pinDown) return this.activePin;
+        if(this.activePin === this.pinDown) return this.activePin._gpio;
+        this.pinDown.writeSync(0);
         this.activePin = this.pinDown;
     };
 
     this.switch = function () {
         if(this.activePin === this.pinDown){
+            this.pinUp.writeSync(0);
             this.activePin = this.pinUp
         } else if(this.activePin === this.pinUp) {
+            this.pinDown.writeSync(0);
             this.activePin = this.pinDown;
         }
     };
@@ -42,11 +68,14 @@ function ButtonCouple(identifier, pinUp, pinDown) {
 
 
     this.stop = function () {
+        this.pinUp.writeSync(1);
+        this.pinDown.writeSync(1);
         this.activePin= 0;
     };
 
 
 
+    this.stop();
 
 
 

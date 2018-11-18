@@ -5,7 +5,7 @@ var myConfig = require('../config');
 
 router.get('/', function(req, res, next) {
 
-    console.log(myConfig);
+    // console.log(myConfig);
 
 
     let copyConfig = JSON.parse(JSON.stringify(myConfig));
