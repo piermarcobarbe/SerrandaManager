@@ -9,7 +9,8 @@ if(process.platform === "linux"){
 }
 
 
-
+// 1 -> switch closed (current passing)
+// 0 -> switch opened (current NOT passing)
 
 
 function ButtonCouple(identifier, pinUp, pinDown) {
@@ -43,6 +44,11 @@ function ButtonCouple(identifier, pinUp, pinDown) {
         this.activePin = this.pinUp;
     };
 
+    this.upAsync = function (cb) {
+        this.up();
+        if(cb) cb();
+    }
+
     this.down = function () {
         if(this.activePin === this.pinUp) return this.stop();
         if(this.activePin === this.pinDown) return this.activePin._gpio;
@@ -50,11 +56,18 @@ function ButtonCouple(identifier, pinUp, pinDown) {
         this.activePin = this.pinDown;
     };
 
+    this.downAsync = function (cb) {
+        this.down();
+        if(cb) cb();
+    }
+
     this.switch = function () {
         if(this.activePin === this.pinDown){
+            this.pinDown.writeSync(1);
             this.pinUp.writeSync(0);
             this.activePin = this.pinUp
         } else if(this.activePin === this.pinUp) {
+            this.pinUp.writeSync(1);
             this.pinDown.writeSync(0);
             this.activePin = this.pinDown;
         }
@@ -63,14 +76,21 @@ function ButtonCouple(identifier, pinUp, pinDown) {
     this.status = function(){
         if(this.activePin === this.pinDown) return "down";
         if(this.activePin === this.pinUp) return "up";
-        if(this.activePin === 0) return "off";
+        return "off";
     };
 
 
+    this.stopAsync = function (cb) {
+        this.stop();
+        if (cb) cb();
+    };
+
     this.stop = function () {
-        this.pinUp.writeSync(1);
-        this.pinDown.writeSync(1);
-        this.activePin= 0;
+        if(this.activePin !== 0){
+            this.pinUp.writeSync(1);
+            this.pinDown.writeSync(1);
+            this.activePin= 0;
+        }
     };
 
 
