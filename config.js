@@ -4,9 +4,9 @@ var buttonCouple = require('./models/ButtonCouple');
 
 var _interface = {
 
-    0 : new buttonCouple("Serranda 1",6, 1),
-    1 : new buttonCouple("Serranda 2",2, 3),
-    2 : new buttonCouple("Serranda 3",4, 5)
+    0 : new buttonCouple("Serranda 1",1, 2),
+    1 : new buttonCouple("Serranda 2",3, 4),
+    2 : new buttonCouple("Serranda 3",5, 6)
 
 }
 
