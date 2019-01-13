@@ -3,16 +3,21 @@ var router = express.Router();
 var myConfig = require('../config');
 
 
-router.get('/', function(req, res, next) {
+router.get('/config', function(req, res, next) {
+  res.send(JSON.stringify(myConfig));
+});
+
+router.get('/all/status', function(req, res, next) {
 
     // console.log(myConfig);
     let copyConfig = JSON.parse(JSON.stringify(myConfig));
 
     for (let button in copyConfig) {
-        copyConfig[button] = myConfig[button].status();
+        if(copyConfig.hasOwnProperty(button)) copyConfig[button] = myConfig[button].status();
     }
+    console.log(copyConfig);
 
-  res.send(JSON.stringify(copyConfig));
+    res.send(JSON.stringify(copyConfig));
 });
 
 router.get('/all/status/up', function (req, res, next) {

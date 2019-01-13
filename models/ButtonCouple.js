@@ -1,11 +1,13 @@
-// https://www.w3schools.com/nodejs/nodejs_raspberrypi_blinking_led.asp
 
 console.log(`This platform is ${process.platform}`);
+
+var Gpio;
+
 if(process.platform === "linux"){
-    var Gpio = require('onoff').Gpio;
+    Gpio = require('onoff').Gpio;
 } else {
     // console.log(__dirname);
-    var Gpio = require("./fakeGpio").Gpio;
+    Gpio = require("./fakeGpio").Gpio;
 }
 
 
@@ -15,27 +17,29 @@ if(process.platform === "linux"){
 
 function ButtonCouple(identifier, pinUp, pinDown) {
 
+    this.identifier = identifier;
+    this.activePin = 0;
+
+
     if(pinDown === 0 || pinUp === 0) throw new Error("Cannot assign GPIO pin 0.");
     if(typeof identifier !== "string") throw new Error("Identifier must be a string");
 
 
+
     try{
         // this.pinUp = pinUp;
-        console.log("setting up Gpio " + pinUp);
+        console.log(this.identifier + ": setting up Gpio " + pinUp);
         this.pinUp = new Gpio(pinUp, 'out');
     } catch (e) {
         throw e;
     }
 
     try {
-        console.log("setting up Gpio " + pinDown);
+        console.log(this.identifier + ": setting up Gpio " + pinDown);
         this.pinDown = new Gpio(pinDown, 'out');
     } catch (e) {
         throw e;
     }
-
-    this.identifier = identifier;
-    this.activePin = 0;
 
     this.up = function () {
         if(this.activePin === this.pinDown) return this.stop();
