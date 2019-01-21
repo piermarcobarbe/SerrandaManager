@@ -1,3 +1,5 @@
+var socket = io(window.location.href);
+
 getButtonId = function(button){
     return button.parentNode.getAttribute("data-buttonGroup");
     // console.log(button.parentNode);
