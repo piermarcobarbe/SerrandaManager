@@ -81,9 +81,17 @@ createTabPane = function(isActive, aria_labelled_by, id, index){
     //  #href                   id
     //  aria-controls           id
 
+    let row = document.createElement("div");
+    row.classList.add("row");
+    row.classList.add("justify-content-sm-center");
+
     let tabPane = document.createElement("div");
     tabPane.classList.add("tab-pane");
     tabPane.classList.add("fade");
+    tabPane.classList.add("col-md-12");
+
+
+
     if(isActive) tabPane.classList.add("show");
     if(isActive) tabPane.classList.add("active");
 
@@ -98,6 +106,8 @@ createTabPane = function(isActive, aria_labelled_by, id, index){
     btn_block.classList.add("btn-block");
     btn_block.classList.add("btn");
     btn_block.classList.add("btn-group-vertical");
+    btn_block.classList.add("col");
+    btn_block.classList.add("col-sm-8");
 
     btn_block.setAttribute("role", "group");
 
@@ -131,7 +141,11 @@ createTabPane = function(isActive, aria_labelled_by, id, index){
     btn_block.appendChild(upButton);
     btn_block.appendChild(downButton);
 
-    tabPane.appendChild(btn_block);
+    row.appendChild(btn_block);
+
+    tabPane.appendChild(row);
+
+
 
     return tabPane;
 
