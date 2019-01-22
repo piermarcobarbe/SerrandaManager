@@ -7,6 +7,7 @@ router.get('/config', function(req, res, next) {
   res.send(JSON.stringify(myConfig));
 });
 
+// console.log(app);
 router.get('/all/status', function(req, res, next) {
 
     // console.log(myConfig);
@@ -24,6 +25,7 @@ router.get('/all/status/up', function (req, res, next) {
     for (let button in myConfig) {
         if (myConfig.hasOwnProperty(button)) {
             myConfig[button].stopAsync(function () {
+
                 myConfig[button].up();
             });
         }

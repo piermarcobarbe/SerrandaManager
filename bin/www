@@ -27,17 +27,16 @@ var server = http.createServer(app);
 var io = require("socket.io")(server);
 
 io.on("connection", function (socket) {
-  console.log(io.engine.clientsCount + " connected clients.");
-  if(stopTimeout !== null){
-    console.log("clearing timeout");
-    clearTimeout(stopTimeout);
-  }
+  // console.log(io.engine.clientsCount + " connected clients.");
+  if(stopTimeout !== null) clearTimeout(stopTimeout);
+    // console.log("clearing timeout");
+
 
   socket.on("disconnect", function () {
-    console.log(io.engine.clientsCount);
+    // console.log(io.engine.clientsCount);
     if(io.engine.clientsCount === 0){
       let timeout = 1000 * 180; // 3 mins
-      console.log("setting stopTimeout");
+      // console.log("setting stopTimeout");
       stopTimeout = setTimeout(function () {
         request("http://127.0.0.1:3000/buttons/all/status/stop", null, function (err, res, body) {
           if (err) throw err;

@@ -1,9 +1,7 @@
 class Gpio {
-    constructor(gpio, direction, edge, options) {
+    constructor(gpio) {
         this._gpio = gpio;
-        this._direction = direction;
         this.active = 0;
-
         }
 
 
