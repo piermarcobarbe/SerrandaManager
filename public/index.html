@@ -15,8 +15,8 @@
     <!-- Clockpicker -->
 
     <!--<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">-->
-    <link rel="stylesheet" type="text/css" href="/dist/bootstrap-clockpicker.min.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/github.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="/dist/bootstrap-clockpicker.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="/assets/css/github.min.css">-->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -24,8 +24,8 @@
     <script src="javascripts/setup.js"></script>
     <!--<script type="text/javascript" src="assets/js/jquery.min.js"></script>-->
     <!--<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>-->
-    <script type="text/javascript" src="dist/bootstrap-clockpicker.min.js"></script>
-    <script type="text/javascript" src="assets/js/highlight.min.js"></script>
+    <!--<script type="text/javascript" src="dist/bootstrap-clockpicker.min.js"></script>-->
+    <!--<script type="text/javascript" src="assets/js/highlight.min.js"></script>-->
 
 
 
@@ -41,29 +41,44 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">-->
-        <!--<ul class="navbar-nav mr-auto">-->
-            <!--<li class="nav-item active">-->
-                <!--<a class="nav-link font-weight-light" data-toggle="modal" data-target="#settingsModal">Settings</a>-->
-            <!--</li>-->
-        <!--</ul>-->
-    <!--</div>-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link font-weight-light" data-toggle="modal" data-target="#settingsModal">Settings</a>
+            </li>
+            <li class="nav-item">
+            </li>
+        </ul>
+
+    </div>
+
+
+
+
 </nav>
 
 
 <div class="container-fluid pt-2">
 
-    <!--<div class="modal fade" tabindex="-1" role="dialog" id="settingsModal" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">-->
-        <!--<div class="modal-dialog" role="document">-->
-            <!--<div class="modal-content">-->
-                <!--<div class="modal-header">-->
-                    <!--<h5 class="modal-title" id="exampleModalLabel">Settings</h5>-->
-                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
-                        <!--<span aria-hidden="true">&times;</span>-->
-                    <!--</button>-->
-                <!--</div>-->
-                <!--<div class="modal-body container">-->
-                    <!--&lt;!&ndash;Monday&ndash;&gt;-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="settingsModal" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Settings</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body container">
+    <div>
+        <label class="pt-1">Live status</label>
+                    <label class="switch m-0 ">
+
+                        <input type="checkbox" checked class="success ml-1" id="isLive">
+                        <span class="slider round"></span>
+                    </label>
+    </div>
+                    <!--Monday-->
                     <!--<div>-->
                     <!--<div class="d-flex justify-content-between bd-highlight">-->
                         <!--<div class="bd-highlight font-weight-bold pt-2">Monday</div>-->
@@ -91,15 +106,15 @@
 
 
 
-                <!--</div>-->
+                </div>
                 <!--<div class="modal-footer">-->
                     <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
                     <!--<button type="button" class="btn btn-primary">Save changes</button>-->
                 <!--</div>-->
 
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
+            </div>
+        </div>
+    </div>
 
 
 
@@ -112,8 +127,6 @@
 
     <div class="container">
       <div class="row justify-content-sm-center">
-
-
         <div class="col-sm-8 btn-lg btn-block btn btn-group-vertical" role="group">
           <button type="button" class="btn btn-outline-dark pt-3 pb-3" id="upAllButton">
               <i class="fas fa-angle-double-up fa-2x"></i>
@@ -127,13 +140,8 @@
               <i class="fas fa-stop-circle fa-2x"></i>
           </button>
         </div>
-
-
       </div>
     </div>
 </div>
-
-
-
 </body>
 </html>

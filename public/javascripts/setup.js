@@ -1,4 +1,5 @@
 var socket = io(window.location.href);
+var liveInterval;
 
 getButtonId = function(button){
     return button.parentNode.getAttribute("data-buttonGroup");
@@ -292,6 +293,21 @@ window.onload = function () {
 
     reflectStatus();
 
+    $("#isLive").change(function () {
+        if($("#isLive").prop("checked")){
+            liveInterval = setInterval(reflectStatus, 2000);
+            // console.log("yes")
+        } else {
+            clearInterval(liveInterval);
+            // console.log("no")
+        }
+    });
+
 };
 
-setInterval(reflectStatus, 2000);
+
+
+liveInterval = setInterval(reflectStatus, 2000);
+
+
+
