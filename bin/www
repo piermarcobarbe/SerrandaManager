@@ -40,7 +40,7 @@ io.on("connection", function (socket) {
       stopTimeout = setTimeout(function () {
         request("http://127.0.0.1:3000/buttons/all/status/stop", null, function (err, res, body) {
           if (err) throw err;
-          console.log(JSON.parse(res.body));
+          // console.log(JSON.parse(res.body));
           // console.log(body.url);
           stopTimeout = null;
         })

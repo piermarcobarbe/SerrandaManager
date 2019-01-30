@@ -1,6 +1,6 @@
 var buttonCouple = require('./models/ButtonCouple');
 
-// http://pi4j.com/images/j8header-3b.png
+// https://raspi.tv/2013/rpi-gpio-basics-4-setting-up-rpi-gpio-numbering-systems-and-inputs
 
 var _interface = {
 
