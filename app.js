@@ -7,21 +7,13 @@ const basicAuthUsers = require('./users');
 
 // basicAuthUsers = { "Test" : "testPasswd", "Test2" : "anotherPasswd"};
 
-console.log(basicAuthUsers);
-
-
 var indexRouter = require('./routes/index');
 var buttonsRouter = require('./routes/buttons');
 
-
 var app = express();
-
-// app.use(logger(':method :url (:remote-addr) ~ :status ~ :response-time ms'));
 
 app.use(logger(':remote-addr, :status - [:date[clf]] ":method :url" (:referrer)'));
 
-
-// app.use(logger('combined'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -32,11 +24,7 @@ app.use(basicAuth({
 );
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
 app.use('/', indexRouter);
 app.use('/buttons', buttonsRouter);
-
-
 
 module.exports = app;

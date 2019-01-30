@@ -20,12 +20,10 @@ function ButtonCouple(identifier, pinUp, pinDown) {
     this.identifier = identifier;
     this.activePin = 0;
 
-
     if(pinDown === 0 || pinUp === 0) throw new Error("Cannot assign GPIO pin 0.");
     if(typeof identifier !== "string") throw new Error("Identifier must be a string");
 
-    try{
-        // this.pinUp = pinUp;
+    try {
         console.log(this.identifier + ": setting up Gpio " + pinUp);
         this.pinUp = new Gpio(pinUp, 'out');
     } catch (e) {
@@ -51,7 +49,7 @@ function ButtonCouple(identifier, pinUp, pinDown) {
     this.upAsync = function (cb) {
         this.up();
         if(cb) cb();
-    }
+    };
 
     this.down = function () {
         if(this.activePin === this.pinUp) return this.stop();
@@ -63,7 +61,7 @@ function ButtonCouple(identifier, pinUp, pinDown) {
     this.downAsync = function (cb) {
         this.down();
         if(cb) cb();
-    }
+    };
 
     this.switch = function () {
         if(this.activePin === this.pinDown){
@@ -91,11 +89,9 @@ function ButtonCouple(identifier, pinUp, pinDown) {
     };
 
     this.stop = function () {
-        if(this.activePin !== 0){
-            this.pinUp.writeSync(1);
-            this.pinDown.writeSync(1);
-            this.activePin = 0;
-        }
+        this.pinUp.writeSync(1);
+        this.pinDown.writeSync(1);
+        this.activePin = 0;
     };
 
     this.stop();

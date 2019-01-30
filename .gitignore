@@ -4,3 +4,4 @@ package-lock.json
 *.xml
 .DS_Store
 users.js
+config.js
