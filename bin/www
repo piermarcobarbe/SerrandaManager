@@ -7,6 +7,8 @@
 var app = require('../app');
 var debug = require('debug')('serrandamanager:server');
 var http = require('http');
+var https = require('https');
+
 const request = require('request');
 
 var stopTimeout;
@@ -23,7 +25,8 @@ console.log("Setting port " + port);
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+console.log(app);
+var server = https.createServer({key : app.key, cert : app.cert}, app);
 var io = require("socket.io")(server);
 
 io.on("connection", function (socket) {
