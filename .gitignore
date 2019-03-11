@@ -3,5 +3,5 @@ package-lock.json
 *.iml
 *.xml
 .DS_Store
-users.js
-config.js
+./users.js
+./config.js
