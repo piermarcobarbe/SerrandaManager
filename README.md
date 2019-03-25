@@ -1,13 +1,11 @@
-# SerrandaManager
-Controlling shutters using HTTP.
+## SerrandaManager: Controlling shutters using HTTP.
 
-
-## Installation
+### Installation
 - ``git clone git@github.com:piermarcobarbe/SerrandaManager.git``
 - ``cd SerrandaManager``
 - ``npm install``
 - ``node bin/www``
-- go to ``https://localhost:3000/``
+- go to ``http://localhost:3000/``
 
 
 ## Configuration
@@ -38,3 +36,14 @@ Inside this file, another json must be created. Its structure is the following:
 }
 ```
 ``user1`` may login using ``password1`` as password now.
+
+### HTTP vs HTTPS
+Inside the ``SerrandaManager/utils`` directory you can find a bash script that generates a .key and a .cert file.
+These, placed in the ``SerrandaManager`` directory allow the server to use HTTPS instead of HTTP.
+Simply run
+```bash
+    chmod +x generateKeyCert.sh; ./generateKeyCert.sh
+```
+from the utils directory and the 2 needed files will be generated.
+
+The web server should run under ``http://localhost:3000`` or ``https://localhost:3000``.
