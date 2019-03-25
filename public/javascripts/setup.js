@@ -1,4 +1,4 @@
-var socket = io(window.location.href);
+// var socket = io(window.location.href);
 var liveInterval;
 
 getButtonId = function(button){
