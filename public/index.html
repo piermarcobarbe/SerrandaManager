@@ -9,27 +9,12 @@
     <link rel="stylesheet" href="stylesheets/style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!--<script src="/socket.io/socket.io.js"></script>-->
     <link rel="icon" type="image/png" href="/favicon.png" />
-
-    <!-- Clockpicker -->
-
-    <!--<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="/dist/bootstrap-clockpicker.min.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="/assets/css/github.min.css">-->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="javascripts/setup.js"></script>
-    <!--<script type="text/javascript" src="assets/js/jquery.min.js"></script>-->
-    <!--<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>-->
-    <!--<script type="text/javascript" src="dist/bootstrap-clockpicker.min.js"></script>-->
-    <!--<script type="text/javascript" src="assets/js/highlight.min.js"></script>-->
-
-
-
-
 
     <title>Serranda Manager</title>
 </head>
@@ -77,56 +62,23 @@
                         <input type="checkbox" checked class="success ml-1" id="isLive">
                         <span class="slider round"></span>
                     </label>
-    </div>
-                    <!--Monday-->
-                    <!--<div>-->
-                    <!--<div class="d-flex justify-content-between bd-highlight">-->
-                        <!--<div class="bd-highlight font-weight-bold pt-2">Monday</div>-->
-
-                        <!--<div class="bd-highlight">-->
-                            <!--<label class="switch" style="text-align: right">-->
-                                <!--<input type="checkbox" class="default">-->
-                                <!--<span class="slider round"></span>-->
-                            <!--</label>-->
-                        <!--</div>-->
-
-                        <!--<div class="bd-highlight">-->
-                            <!--<div class="input-group clockpicker" data-align="top" data-autoclose="true">-->
-                                <!--<input type="text" class="form-control" value="00:00">-->
-                                <!--&lt;!&ndash;<span class="input-group-addon">&ndash;&gt;-->
-                                <!--&lt;!&ndash;<span class="glyphicon glyphicon-time"></span>&ndash;&gt;-->
-                                <!--&lt;!&ndash;</span>&ndash;&gt;-->
-                            <!--</div>-->
-                            <!--<script type="text/javascript">-->
-                                <!--$('.clockpicker').clockpicker();-->
-                            <!--</script>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--</div>-->
-
-
-
+                  </div>
                 </div>
-                <!--<div class="modal-footer">-->
-                    <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
-                <!--</div>-->
-
-            </div>
+              </div>
         </div>
     </div>
 
 
 
-    <ul class="nav nav-tabs" id="pills-tab" role="tablist">
+    <ul class="nav nav-tabs ifValidConfig d-none" id="pills-tab" role="tablist">
     </ul>
-    <div class="container">
+    <div class="container ifValidConfig d-none">
         <div class="tab-content row" id="pills-tabContent">
         </div>
     </div>
 
-    <div class="container">
-      <div class="row justify-content-sm-center">
+    <div class="container" id="mainContainer">
+      <div class="row justify-content-sm-center ifValidConfig d-none">
         <div class="col-sm-8 btn-lg btn-block btn btn-group-vertical" role="group">
           <button type="button" class="btn btn-outline-dark pt-3 pb-3" id="upAllButton">
               <i class="fas fa-angle-double-up fa-2x"></i>

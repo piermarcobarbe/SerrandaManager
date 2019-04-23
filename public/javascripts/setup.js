@@ -1,12 +1,29 @@
 // var socket = io(window.location.href);
 var liveInterval;
+var config;
 
 getButtonId = function(button){
     return button.parentNode.getAttribute("data-buttonGroup");
 
 };
 
-reflectConfig = function(cb){
+displayEmptyConfigurationMessage = function(){
+    // console.log("err");
+    let row = document.createElement("div");
+    row.classList.add("row");
+    // row.classList.add("bg-danger");
+
+    var mainContainer = document.getElementById("mainContainer");
+    mainContainer.appendChild(row);
+
+    let text = document.createElement('h4');
+    text.classList.add("text-danger")
+    row.appendChild(text);
+
+    text.innerHTML = "No configuration file was found.<br>Please refer to the <a href='https://github.com/piermarcobarbe/SerrandaManager/'>SerrandaManager GitHub repository</a> for providing the server a configuration file.<br>";
+};
+
+getConfig = function(cb){
     const Http = new XMLHttpRequest();
 
     var HttpMethod = "GET";
@@ -15,37 +32,41 @@ reflectConfig = function(cb){
     Http.open(HttpMethod, window.location.href + _url);
     Http.send();
 
-    Http.onreadystatechange = function(){
-        if(this.status !== 200 || this.readyState !== 4) return;
-        console.log("Request to " + window.location.href + _url + " returned");
+    Http.onreadystatechange = function() {
+        if (this.status !== 200 || this.readyState !== 4) return;
+        // console.log("Request to " + window.location.href + _url + " returned");
+        config = this.responseText;
+        console.log("Config:" + config);
 
-        let config = JSON.parse(this.responseText);
-        console.log(config);
-        let parsedItems = 0;
-
-        let tabs = document.getElementById("pills-tab");
-        let mainContent = document.getElementById("pills-tabContent");
-
-        for(let button in config){
-            if(config.hasOwnProperty(button)){
-                let value = config[button];
-                let formattedId = value.identifier;
-                formattedId = formattedId.replace(" ", "-");
-                formattedId = formattedId.toLowerCase();
-                // console.log(formattedId);
-                if(parsedItems === 0) {
-                    tabs.appendChild(createNavItem(true, true, formattedId, "#"+formattedId, value.identifier));
-                    mainContent.appendChild(createTabPane(true, formattedId, formattedId, button, value.identifier));
-                } else {
-                    tabs.appendChild(createNavItem(false, false, formattedId, "#"+formattedId, value.identifier));
-                    mainContent.appendChild(createTabPane(false, formattedId, formattedId, button, value.identifier));
-                }
-                parsedItems ++;
-
-            }
-        }
         if(cb) cb();
     }
+};
+
+reflectConfig = function(cb){
+    let parsedItems = 0;
+    let tabs = document.getElementById("pills-tab");
+    let mainContent = document.getElementById("pills-tabContent");
+
+    for(let button in config){
+        if(config.hasOwnProperty(button)){
+            let value = config[button];
+            let formattedId = value.identifier;
+            formattedId = formattedId.replace(" ", "-");
+            formattedId = formattedId.toLowerCase();
+            // console.log(formattedId);
+            if(parsedItems === 0) {
+                tabs.appendChild(createNavItem(true, true, formattedId, "#"+formattedId, value.identifier));
+                mainContent.appendChild(createTabPane(true, formattedId, formattedId, button, value.identifier));
+            } else {
+                tabs.appendChild(createNavItem(false, false, formattedId, "#"+formattedId, value.identifier));
+                mainContent.appendChild(createTabPane(false, formattedId, formattedId, button, value.identifier));
+            }
+            parsedItems ++;
+
+        }
+    }
+
+    if(cb) cb();
 };
 
 createTabPane = function(isActive, aria_labelled_by, id, index, identifier){
@@ -176,7 +197,7 @@ bindButtonClickEvent = function(target, targetName, HttpMethod, url){
 };
 
 
-bindButtons = function(){
+bindButtons = function(cb){
     let upButtons = $(".up");
     let downButtons = $(".down");
 
@@ -197,13 +218,13 @@ bindButtons = function(){
         bindButtonClickEvent(upButton, "upButton", HTTPMethod, _url +  "/up");
         bindButtonClickEvent(downButton, "downButton", HTTPMethod, _url + "/down");
 
-
     }
 
     bindButtonClickEvent(upAll, "upAllButton", "GET", "buttons/all/status/up");
     bindButtonClickEvent(downAll, "downAllButton", "GET", "buttons/all/status/down");
     bindButtonClickEvent(stopAllButton, "stopAllButton", "GET", "buttons/all/status/stop");
 
+    if(cb) cb();
 }
 
 reflectStatus = function(){
@@ -287,27 +308,39 @@ reflectStatus = function(){
 };
 
 window.onload = function () {
-    reflectConfig(function () {
-        bindButtons();
-    });
 
-    reflectStatus();
-
-    $("#isLive").change(function () {
-        if($("#isLive").prop("checked")){
-            liveInterval = setInterval(reflectStatus, 2000);
-            // console.log("yes")
+    getConfig(function () {
+        if(config === '{}'){
+            displayEmptyConfigurationMessage();
         } else {
-            clearInterval(liveInterval);
-            // console.log("no")
-        }
-    });
+            config = JSON.parse(config);
+            reflectConfig(function () {
+                bindButtons(function () {
+                    reflectStatus();
+                    $(".ifValidConfig").removeClass("d-none");
+                    $("#isLive").change(function () {
+                        if($("#isLive").prop("checked")){
+                            liveInterval = setInterval(reflectStatus, 2000);
+                            // console.log("yes")
+                        } else {
+                            clearInterval(liveInterval);
+                            // console.log("no")
+                        }
+                    });
 
+                    liveInterval = setInterval(reflectStatus, 2000);
+                });
+            });
+
+
+        }
+
+    });
 };
 
 
 
-liveInterval = setInterval(reflectStatus, 2000);
+
 
 
 

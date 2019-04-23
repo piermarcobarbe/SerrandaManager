@@ -6,7 +6,6 @@ var Gpio;
 if(process.platform === "linux"){
     Gpio = require('onoff').Gpio;
 } else {
-    // console.log(__dirname);
     Gpio = require("./fakeGpio").Gpio;
 }
 

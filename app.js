@@ -3,22 +3,21 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const basicAuth = require('express-basic-auth');
-
+const fs = require("fs");
+var app = express();
 var basicAuthUsers;
 
 try{
     basicAuthUsers = require('./users');
+    console.log("Setting app users from ./users.js");
+    app.use(basicAuth({
+            "users" : basicAuthUsers,
+            challenge : true
+        })
+    );
 } catch (e) {
-    basicAuthUsers = null;
+    console.log("Basic Authentication disabled!");
 }
-const fs = require("fs");
-
-// basicAuthUsers = { "Test" : "testPasswd", "Test2" : "anotherPasswd"};
-
-
-
-var app = express();
-// console.log(fs.readFileSync("./server.key").toString());
 
 try{
     app.key = fs.readFileSync("./server.key").toString();
@@ -32,25 +31,9 @@ try{
 }
 
 
-
 app.use(logger(':remote-addr, :status - [:date[clf]] ":method :url" (:referrer)'));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-
-// console.log(basicAuthUsers);
-
-if(basicAuthUsers){
-    console.log("Setting app users from ./users.js");
-    app.use(basicAuth({
-            "users" : basicAuthUsers,
-            challenge : true
-        })
-    );
-} else {
-    console.log("Basic Authentication disabled!");
-}
-
 
 module.exports = app;

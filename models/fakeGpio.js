@@ -2,7 +2,7 @@ class Gpio {
     constructor(gpio) {
         this._gpio = gpio;
         this.active = 0;
-        }
+    }
 
 
     read(callback) {

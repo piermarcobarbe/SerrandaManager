@@ -1,7 +1,18 @@
 var express = require('express');
 var router = express.Router();
-var myConfig = require('../config');
 var request = require('request');
+var fs = require('fs');
+var checkConfiguration = require('../checks/configurationCheck');
+
+var myConfig;
+
+if (fs.existsSync("config.js")){
+    myConfig = require('../config');
+    checkConfiguration(myConfig);
+} else {
+    myConfig = {};
+}
+
 var autoStopTimeout;
 
 const checkAutoStopTimeout = function(){
