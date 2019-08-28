@@ -1,22 +1,10 @@
+var buttonCouple = require("./models/ButtonCouple");
+
 let interface = {
-    0 : {
-        "identifier" :"test1",
-        "activePin" : 0,
-        "status" : function () {
-            return (this.activePin === 0 ? "up" : "down");
-        },
-        "up" : function () {
-            this.activePin = 0;
-            return this.status();
-        },
-        "down" : function () {
-            this.activePin = 1;
-            return this.status();
-        }
-        "stop" : function () {
-            this
-        }
-    }
+    0 : new buttonCouple("Switch 1", 14, 15),
+    1 : new buttonCouple("Switch 2", 18, 23),
+    2 : new buttonCouple("Switch 3", 24, 25)
+
 }
 
 module.exports = interface;
