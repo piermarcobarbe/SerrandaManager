@@ -7,68 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C345394243C882E00FF7B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C345393243C882E00FF7B3D /* AppDelegate.swift */; };
-		4C345396243C882E00FF7B3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C345395243C882E00FF7B3D /* SceneDelegate.swift */; };
-		4C345399243C882E00FF7B3D /* SerrandaManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C345397243C882E00FF7B3D /* SerrandaManager.xcdatamodeld */; };
-		4C34539B243C882E00FF7B3D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34539A243C882E00FF7B3D /* ContentView.swift */; };
-		4C34539D243C883000FF7B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C34539C243C883000FF7B3D /* Assets.xcassets */; };
-		4C3453A0243C883000FF7B3D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C34539F243C883000FF7B3D /* Preview Assets.xcassets */; };
-		4C3453A3243C883000FF7B3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3453A1243C883000FF7B3D /* LaunchScreen.storyboard */; };
-		4C3453AE243C883000FF7B3D /* SerrandaManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3453AD243C883000FF7B3D /* SerrandaManagerTests.swift */; };
-		4C3453B9243C883000FF7B3D /* SerrandaManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3453B8243C883000FF7B3D /* SerrandaManagerUITests.swift */; };
+		4CE28613243F3EB20028B773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE28612243F3EB20028B773 /* AppDelegate.swift */; };
+		4CE28615243F3EB20028B773 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE28614243F3EB20028B773 /* SceneDelegate.swift */; };
+		4CE28617243F3EB20028B773 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE28616243F3EB20028B773 /* ViewController.swift */; };
+		4CE2861A243F3EB20028B773 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE28618243F3EB20028B773 /* Main.storyboard */; };
+		4CE2861D243F3EB20028B773 /* SerrandaManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2861B243F3EB20028B773 /* SerrandaManager.xcdatamodeld */; };
+		4CE2861F243F3EB30028B773 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CE2861E243F3EB30028B773 /* Assets.xcassets */; };
+		4CE28622243F3EB30028B773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE28620243F3EB30028B773 /* LaunchScreen.storyboard */; };
+		4CE2862D243F3EB30028B773 /* SerrandaManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2862C243F3EB30028B773 /* SerrandaManagerTests.swift */; };
+		4CE28638243F3EB30028B773 /* SerrandaManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE28637243F3EB30028B773 /* SerrandaManagerUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4C3453AA243C883000FF7B3D /* PBXContainerItemProxy */ = {
+		4CE28629243F3EB30028B773 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4C345388243C882E00FF7B3D /* Project object */;
+			containerPortal = 4CE28607243F3EB20028B773 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4C34538F243C882E00FF7B3D;
+			remoteGlobalIDString = 4CE2860E243F3EB20028B773;
 			remoteInfo = SerrandaManager;
 		};
-		4C3453B5243C883000FF7B3D /* PBXContainerItemProxy */ = {
+		4CE28634243F3EB30028B773 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4C345388243C882E00FF7B3D /* Project object */;
+			containerPortal = 4CE28607243F3EB20028B773 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4C34538F243C882E00FF7B3D;
+			remoteGlobalIDString = 4CE2860E243F3EB20028B773;
 			remoteInfo = SerrandaManager;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C345390243C882E00FF7B3D /* SerrandaManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SerrandaManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C345393243C882E00FF7B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C345395243C882E00FF7B3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4C345398243C882E00FF7B3D /* SerrandaManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SerrandaManager.xcdatamodel; sourceTree = "<group>"; };
-		4C34539A243C882E00FF7B3D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		4C34539C243C883000FF7B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4C34539F243C883000FF7B3D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4C3453A2243C883000FF7B3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4C3453A4243C883000FF7B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C3453A9243C883000FF7B3D /* SerrandaManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SerrandaManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C3453AD243C883000FF7B3D /* SerrandaManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerrandaManagerTests.swift; sourceTree = "<group>"; };
-		4C3453AF243C883000FF7B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C3453B4243C883000FF7B3D /* SerrandaManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SerrandaManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C3453B8243C883000FF7B3D /* SerrandaManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerrandaManagerUITests.swift; sourceTree = "<group>"; };
-		4C3453BA243C883000FF7B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CE2860F243F3EB20028B773 /* SerrandaManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SerrandaManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CE28612243F3EB20028B773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4CE28614243F3EB20028B773 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4CE28616243F3EB20028B773 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4CE28619243F3EB20028B773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4CE2861C243F3EB20028B773 /* SerrandaManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SerrandaManager.xcdatamodel; sourceTree = "<group>"; };
+		4CE2861E243F3EB30028B773 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CE28621243F3EB30028B773 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4CE28623243F3EB30028B773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CE28628243F3EB30028B773 /* SerrandaManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SerrandaManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CE2862C243F3EB30028B773 /* SerrandaManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerrandaManagerTests.swift; sourceTree = "<group>"; };
+		4CE2862E243F3EB30028B773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CE28633243F3EB30028B773 /* SerrandaManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SerrandaManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CE28637243F3EB30028B773 /* SerrandaManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerrandaManagerUITests.swift; sourceTree = "<group>"; };
+		4CE28639243F3EB30028B773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CE28645243F3EC70028B773 /* SerrandaManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SerrandaManager.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4C34538D243C882E00FF7B3D /* Frameworks */ = {
+		4CE2860C243F3EB20028B773 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C3453A6243C883000FF7B3D /* Frameworks */ = {
+		4CE28625243F3EB30028B773 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C3453B1243C883000FF7B3D /* Frameworks */ = {
+		4CE28630243F3EB30028B773 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,63 +79,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C345387243C882E00FF7B3D = {
+		4CE28606243F3EB20028B773 = {
 			isa = PBXGroup;
 			children = (
-				4C345392243C882E00FF7B3D /* SerrandaManager */,
-				4C3453AC243C883000FF7B3D /* SerrandaManagerTests */,
-				4C3453B7243C883000FF7B3D /* SerrandaManagerUITests */,
-				4C345391243C882E00FF7B3D /* Products */,
+				4CE28611243F3EB20028B773 /* SerrandaManager */,
+				4CE2862B243F3EB30028B773 /* SerrandaManagerTests */,
+				4CE28636243F3EB30028B773 /* SerrandaManagerUITests */,
+				4CE28610243F3EB20028B773 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4C345391243C882E00FF7B3D /* Products */ = {
+		4CE28610243F3EB20028B773 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C345390243C882E00FF7B3D /* SerrandaManager.app */,
-				4C3453A9243C883000FF7B3D /* SerrandaManagerTests.xctest */,
-				4C3453B4243C883000FF7B3D /* SerrandaManagerUITests.xctest */,
+				4CE2860F243F3EB20028B773 /* SerrandaManager.app */,
+				4CE28628243F3EB30028B773 /* SerrandaManagerTests.xctest */,
+				4CE28633243F3EB30028B773 /* SerrandaManagerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4C345392243C882E00FF7B3D /* SerrandaManager */ = {
+		4CE28611243F3EB20028B773 /* SerrandaManager */ = {
 			isa = PBXGroup;
 			children = (
-				4C345393243C882E00FF7B3D /* AppDelegate.swift */,
-				4C345395243C882E00FF7B3D /* SceneDelegate.swift */,
-				4C34539A243C882E00FF7B3D /* ContentView.swift */,
-				4C34539C243C883000FF7B3D /* Assets.xcassets */,
-				4C3453A1243C883000FF7B3D /* LaunchScreen.storyboard */,
-				4C3453A4243C883000FF7B3D /* Info.plist */,
-				4C345397243C882E00FF7B3D /* SerrandaManager.xcdatamodeld */,
-				4C34539E243C883000FF7B3D /* Preview Content */,
+				4CE28645243F3EC70028B773 /* SerrandaManager.entitlements */,
+				4CE28612243F3EB20028B773 /* AppDelegate.swift */,
+				4CE28614243F3EB20028B773 /* SceneDelegate.swift */,
+				4CE28616243F3EB20028B773 /* ViewController.swift */,
+				4CE28618243F3EB20028B773 /* Main.storyboard */,
+				4CE2861E243F3EB30028B773 /* Assets.xcassets */,
+				4CE28620243F3EB30028B773 /* LaunchScreen.storyboard */,
+				4CE28623243F3EB30028B773 /* Info.plist */,
+				4CE2861B243F3EB20028B773 /* SerrandaManager.xcdatamodeld */,
 			);
 			path = SerrandaManager;
 			sourceTree = "<group>";
 		};
-		4C34539E243C883000FF7B3D /* Preview Content */ = {
+		4CE2862B243F3EB30028B773 /* SerrandaManagerTests */ = {
 			isa = PBXGroup;
 			children = (
-				4C34539F243C883000FF7B3D /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		4C3453AC243C883000FF7B3D /* SerrandaManagerTests */ = {
-			isa = PBXGroup;
-			children = (
-				4C3453AD243C883000FF7B3D /* SerrandaManagerTests.swift */,
-				4C3453AF243C883000FF7B3D /* Info.plist */,
+				4CE2862C243F3EB30028B773 /* SerrandaManagerTests.swift */,
+				4CE2862E243F3EB30028B773 /* Info.plist */,
 			);
 			path = SerrandaManagerTests;
 			sourceTree = "<group>";
 		};
-		4C3453B7243C883000FF7B3D /* SerrandaManagerUITests */ = {
+		4CE28636243F3EB30028B773 /* SerrandaManagerUITests */ = {
 			isa = PBXGroup;
 			children = (
-				4C3453B8243C883000FF7B3D /* SerrandaManagerUITests.swift */,
-				4C3453BA243C883000FF7B3D /* Info.plist */,
+				4CE28637243F3EB30028B773 /* SerrandaManagerUITests.swift */,
+				4CE28639243F3EB30028B773 /* Info.plist */,
 			);
 			path = SerrandaManagerUITests;
 			sourceTree = "<group>";
@@ -142,13 +136,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C34538F243C882E00FF7B3D /* SerrandaManager */ = {
+		4CE2860E243F3EB20028B773 /* SerrandaManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C3453BD243C883000FF7B3D /* Build configuration list for PBXNativeTarget "SerrandaManager" */;
+			buildConfigurationList = 4CE2863C243F3EB30028B773 /* Build configuration list for PBXNativeTarget "SerrandaManager" */;
 			buildPhases = (
-				4C34538C243C882E00FF7B3D /* Sources */,
-				4C34538D243C882E00FF7B3D /* Frameworks */,
-				4C34538E243C882E00FF7B3D /* Resources */,
+				4CE2860B243F3EB20028B773 /* Sources */,
+				4CE2860C243F3EB20028B773 /* Frameworks */,
+				4CE2860D243F3EB20028B773 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -156,69 +150,69 @@
 			);
 			name = SerrandaManager;
 			productName = SerrandaManager;
-			productReference = 4C345390243C882E00FF7B3D /* SerrandaManager.app */;
+			productReference = 4CE2860F243F3EB20028B773 /* SerrandaManager.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4C3453A8243C883000FF7B3D /* SerrandaManagerTests */ = {
+		4CE28627243F3EB30028B773 /* SerrandaManagerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C3453C0243C883000FF7B3D /* Build configuration list for PBXNativeTarget "SerrandaManagerTests" */;
+			buildConfigurationList = 4CE2863F243F3EB30028B773 /* Build configuration list for PBXNativeTarget "SerrandaManagerTests" */;
 			buildPhases = (
-				4C3453A5243C883000FF7B3D /* Sources */,
-				4C3453A6243C883000FF7B3D /* Frameworks */,
-				4C3453A7243C883000FF7B3D /* Resources */,
+				4CE28624243F3EB30028B773 /* Sources */,
+				4CE28625243F3EB30028B773 /* Frameworks */,
+				4CE28626243F3EB30028B773 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4C3453AB243C883000FF7B3D /* PBXTargetDependency */,
+				4CE2862A243F3EB30028B773 /* PBXTargetDependency */,
 			);
 			name = SerrandaManagerTests;
 			productName = SerrandaManagerTests;
-			productReference = 4C3453A9243C883000FF7B3D /* SerrandaManagerTests.xctest */;
+			productReference = 4CE28628243F3EB30028B773 /* SerrandaManagerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4C3453B3243C883000FF7B3D /* SerrandaManagerUITests */ = {
+		4CE28632243F3EB30028B773 /* SerrandaManagerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C3453C3243C883000FF7B3D /* Build configuration list for PBXNativeTarget "SerrandaManagerUITests" */;
+			buildConfigurationList = 4CE28642243F3EB30028B773 /* Build configuration list for PBXNativeTarget "SerrandaManagerUITests" */;
 			buildPhases = (
-				4C3453B0243C883000FF7B3D /* Sources */,
-				4C3453B1243C883000FF7B3D /* Frameworks */,
-				4C3453B2243C883000FF7B3D /* Resources */,
+				4CE2862F243F3EB30028B773 /* Sources */,
+				4CE28630243F3EB30028B773 /* Frameworks */,
+				4CE28631243F3EB30028B773 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4C3453B6243C883000FF7B3D /* PBXTargetDependency */,
+				4CE28635243F3EB30028B773 /* PBXTargetDependency */,
 			);
 			name = SerrandaManagerUITests;
 			productName = SerrandaManagerUITests;
-			productReference = 4C3453B4243C883000FF7B3D /* SerrandaManagerUITests.xctest */;
+			productReference = 4CE28633243F3EB30028B773 /* SerrandaManagerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4C345388243C882E00FF7B3D /* Project object */ = {
+		4CE28607243F3EB20028B773 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Damiano Pugliesi";
 				TargetAttributes = {
-					4C34538F243C882E00FF7B3D = {
+					4CE2860E243F3EB20028B773 = {
 						CreatedOnToolsVersion = 11.4;
 					};
-					4C3453A8243C883000FF7B3D = {
+					4CE28627243F3EB30028B773 = {
 						CreatedOnToolsVersion = 11.4;
-						TestTargetID = 4C34538F243C882E00FF7B3D;
+						TestTargetID = 4CE2860E243F3EB20028B773;
 					};
-					4C3453B3243C883000FF7B3D = {
+					4CE28632243F3EB30028B773 = {
 						CreatedOnToolsVersion = 11.4;
-						TestTargetID = 4C34538F243C882E00FF7B3D;
+						TestTargetID = 4CE2860E243F3EB20028B773;
 					};
 				};
 			};
-			buildConfigurationList = 4C34538B243C882E00FF7B3D /* Build configuration list for PBXProject "SerrandaManager" */;
+			buildConfigurationList = 4CE2860A243F3EB20028B773 /* Build configuration list for PBXProject "SerrandaManager" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -226,37 +220,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 4C345387243C882E00FF7B3D;
-			productRefGroup = 4C345391243C882E00FF7B3D /* Products */;
+			mainGroup = 4CE28606243F3EB20028B773;
+			productRefGroup = 4CE28610243F3EB20028B773 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C34538F243C882E00FF7B3D /* SerrandaManager */,
-				4C3453A8243C883000FF7B3D /* SerrandaManagerTests */,
-				4C3453B3243C883000FF7B3D /* SerrandaManagerUITests */,
+				4CE2860E243F3EB20028B773 /* SerrandaManager */,
+				4CE28627243F3EB30028B773 /* SerrandaManagerTests */,
+				4CE28632243F3EB30028B773 /* SerrandaManagerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4C34538E243C882E00FF7B3D /* Resources */ = {
+		4CE2860D243F3EB20028B773 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C3453A3243C883000FF7B3D /* LaunchScreen.storyboard in Resources */,
-				4C3453A0243C883000FF7B3D /* Preview Assets.xcassets in Resources */,
-				4C34539D243C883000FF7B3D /* Assets.xcassets in Resources */,
+				4CE28622243F3EB30028B773 /* LaunchScreen.storyboard in Resources */,
+				4CE2861F243F3EB30028B773 /* Assets.xcassets in Resources */,
+				4CE2861A243F3EB20028B773 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C3453A7243C883000FF7B3D /* Resources */ = {
+		4CE28626243F3EB30028B773 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C3453B2243C883000FF7B3D /* Resources */ = {
+		4CE28631243F3EB30028B773 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -266,53 +260,61 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4C34538C243C882E00FF7B3D /* Sources */ = {
+		4CE2860B243F3EB20028B773 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C345394243C882E00FF7B3D /* AppDelegate.swift in Sources */,
-				4C345399243C882E00FF7B3D /* SerrandaManager.xcdatamodeld in Sources */,
-				4C34539B243C882E00FF7B3D /* ContentView.swift in Sources */,
-				4C345396243C882E00FF7B3D /* SceneDelegate.swift in Sources */,
+				4CE28617243F3EB20028B773 /* ViewController.swift in Sources */,
+				4CE28613243F3EB20028B773 /* AppDelegate.swift in Sources */,
+				4CE28615243F3EB20028B773 /* SceneDelegate.swift in Sources */,
+				4CE2861D243F3EB20028B773 /* SerrandaManager.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C3453A5243C883000FF7B3D /* Sources */ = {
+		4CE28624243F3EB30028B773 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C3453AE243C883000FF7B3D /* SerrandaManagerTests.swift in Sources */,
+				4CE2862D243F3EB30028B773 /* SerrandaManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C3453B0243C883000FF7B3D /* Sources */ = {
+		4CE2862F243F3EB30028B773 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C3453B9243C883000FF7B3D /* SerrandaManagerUITests.swift in Sources */,
+				4CE28638243F3EB30028B773 /* SerrandaManagerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4C3453AB243C883000FF7B3D /* PBXTargetDependency */ = {
+		4CE2862A243F3EB30028B773 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4C34538F243C882E00FF7B3D /* SerrandaManager */;
-			targetProxy = 4C3453AA243C883000FF7B3D /* PBXContainerItemProxy */;
+			target = 4CE2860E243F3EB20028B773 /* SerrandaManager */;
+			targetProxy = 4CE28629243F3EB30028B773 /* PBXContainerItemProxy */;
 		};
-		4C3453B6243C883000FF7B3D /* PBXTargetDependency */ = {
+		4CE28635243F3EB30028B773 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4C34538F243C882E00FF7B3D /* SerrandaManager */;
-			targetProxy = 4C3453B5243C883000FF7B3D /* PBXContainerItemProxy */;
+			target = 4CE2860E243F3EB20028B773 /* SerrandaManager */;
+			targetProxy = 4CE28634243F3EB30028B773 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4C3453A1243C883000FF7B3D /* LaunchScreen.storyboard */ = {
+		4CE28618243F3EB20028B773 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4C3453A2243C883000FF7B3D /* Base */,
+				4CE28619243F3EB20028B773 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4CE28620243F3EB30028B773 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CE28621243F3EB30028B773 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -320,7 +322,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4C3453BB243C883000FF7B3D /* Debug */ = {
+		4CE2863A243F3EB30028B773 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -380,7 +382,7 @@
 			};
 			name = Debug;
 		};
-		4C3453BC243C883000FF7B3D /* Release */ = {
+		4CE2863B243F3EB30028B773 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -434,14 +436,13 @@
 			};
 			name = Release;
 		};
-		4C3453BE243C883000FF7B3D /* Debug */ = {
+		4CE2863D243F3EB30028B773 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SerrandaManager/SerrandaManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"SerrandaManager/Preview Content\"";
 				DEVELOPMENT_TEAM = SKWQ4KG5K7;
-				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SerrandaManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,19 +450,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = DamianoPugliesi.SerrandaManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4C3453BF243C883000FF7B3D /* Release */ = {
+		4CE2863E243F3EB30028B773 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SerrandaManager/SerrandaManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"SerrandaManager/Preview Content\"";
 				DEVELOPMENT_TEAM = SKWQ4KG5K7;
-				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SerrandaManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,12 +470,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = DamianoPugliesi.SerrandaManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		4C3453C1243C883000FF7B3D /* Debug */ = {
+		4CE28640243F3EB30028B773 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -496,7 +498,7 @@
 			};
 			name = Debug;
 		};
-		4C3453C2243C883000FF7B3D /* Release */ = {
+		4CE28641243F3EB30028B773 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -518,7 +520,7 @@
 			};
 			name = Release;
 		};
-		4C3453C4243C883000FF7B3D /* Debug */ = {
+		4CE28643243F3EB30028B773 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -538,7 +540,7 @@
 			};
 			name = Debug;
 		};
-		4C3453C5243C883000FF7B3D /* Release */ = {
+		4CE28644243F3EB30028B773 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -561,38 +563,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C34538B243C882E00FF7B3D /* Build configuration list for PBXProject "SerrandaManager" */ = {
+		4CE2860A243F3EB20028B773 /* Build configuration list for PBXProject "SerrandaManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C3453BB243C883000FF7B3D /* Debug */,
-				4C3453BC243C883000FF7B3D /* Release */,
+				4CE2863A243F3EB30028B773 /* Debug */,
+				4CE2863B243F3EB30028B773 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C3453BD243C883000FF7B3D /* Build configuration list for PBXNativeTarget "SerrandaManager" */ = {
+		4CE2863C243F3EB30028B773 /* Build configuration list for PBXNativeTarget "SerrandaManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C3453BE243C883000FF7B3D /* Debug */,
-				4C3453BF243C883000FF7B3D /* Release */,
+				4CE2863D243F3EB30028B773 /* Debug */,
+				4CE2863E243F3EB30028B773 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C3453C0243C883000FF7B3D /* Build configuration list for PBXNativeTarget "SerrandaManagerTests" */ = {
+		4CE2863F243F3EB30028B773 /* Build configuration list for PBXNativeTarget "SerrandaManagerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C3453C1243C883000FF7B3D /* Debug */,
-				4C3453C2243C883000FF7B3D /* Release */,
+				4CE28640243F3EB30028B773 /* Debug */,
+				4CE28641243F3EB30028B773 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C3453C3243C883000FF7B3D /* Build configuration list for PBXNativeTarget "SerrandaManagerUITests" */ = {
+		4CE28642243F3EB30028B773 /* Build configuration list for PBXNativeTarget "SerrandaManagerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C3453C4243C883000FF7B3D /* Debug */,
-				4C3453C5243C883000FF7B3D /* Release */,
+				4CE28643243F3EB30028B773 /* Debug */,
+				4CE28644243F3EB30028B773 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -600,17 +602,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4C345397243C882E00FF7B3D /* SerrandaManager.xcdatamodeld */ = {
+		4CE2861B243F3EB20028B773 /* SerrandaManager.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4C345398243C882E00FF7B3D /* SerrandaManager.xcdatamodel */,
+				4CE2861C243F3EB20028B773 /* SerrandaManager.xcdatamodel */,
 			);
-			currentVersion = 4C345398243C882E00FF7B3D /* SerrandaManager.xcdatamodel */;
+			currentVersion = 4CE2861C243F3EB20028B773 /* SerrandaManager.xcdatamodel */;
 			path = SerrandaManager.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 4C345388243C882E00FF7B3D /* Project object */;
+	rootObject = 4CE28607243F3EB20028B773 /* Project object */;
 }
