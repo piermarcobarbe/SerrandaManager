@@ -10,69 +10,93 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SerrandaManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainPage" id="BYZ-38-t0r" customClass="ViewController" customModule="SerrandaManager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="jsZ-KG-Kga">
-                                <rect key="frame" x="55" y="55" width="266" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mX4-Z4-vmN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mX4-Z4-vmN" secondAttribute="height" multiplier="375:31" id="154-FF-AMQ"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Sinistra"/>
                                     <segment title="Centrale"/>
                                     <segment title="Destra"/>
                                 </segments>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F35-0D-ajZ">
-                                <rect key="frame" x="135" y="233" width="107" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" backgroundImage="arrow.up" catalog="system"/>
-                                <connections>
-                                    <action selector="btnUp_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4r1-O4-Mtf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W56-FV-HlX">
-                                <rect key="frame" x="135" y="421" width="107" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" backgroundImage="arrow.down" catalog="system">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down" translatesAutoresizingMaskIntoConstraints="NO" id="s9e-3v-re0">
+                                <rect key="frame" x="148" y="321" width="78" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s9e-3v-re0" secondAttribute="height" multiplier="39:32" id="xYi-V3-UD6"/>
+                                    <constraint firstAttribute="width" secondItem="s9e-3v-re0" secondAttribute="height" multiplier="13:12" id="xeB-tO-VkU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T81-8U-1W4">
+                                <rect key="frame" x="67" y="502" width="240" height="47"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="T81-8U-1W4" secondAttribute="height" multiplier="240:47" id="ALq-It-axm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <state key="normal" title="   Stop" image="stop.circle" catalog="system">
+                                    <color key="titleShadowColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="btnDown_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pnN-Sv-Vvz"/>
+                                    <action selector="btnStop_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YSE-GZ-6kI"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BdM-RM-Nat">
-                                <rect key="frame" x="272" y="94" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seleziona tutte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiR-gz-UUK">
-                                <rect key="frame" x="149" y="99" width="115" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zMQ-TG-OWv">
+                                <rect key="frame" x="148" y="204" width="78" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zMQ-TG-OWv" secondAttribute="height" multiplier="13:12" id="Io4-b2-0rX"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mX4-Z4-vmN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2qG-cK-Wr7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zMQ-TG-OWv" secondAttribute="trailing" constant="149" id="CUs-3K-jGq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s9e-3v-re0" secondAttribute="trailing" constant="149" id="DTN-Ag-wBr"/>
+                            <constraint firstItem="mX4-Z4-vmN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Fsy-IE-tEF"/>
+                            <constraint firstItem="s9e-3v-re0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="Iam-rO-gTv"/>
+                            <constraint firstItem="mX4-Z4-vmN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KTe-sS-546"/>
+                            <constraint firstItem="zMQ-TG-OWv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="Q3L-ta-dte"/>
+                            <constraint firstItem="T81-8U-1W4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="QFq-lT-RIm"/>
+                            <constraint firstItem="zMQ-TG-OWv" firstAttribute="top" secondItem="mX4-Z4-vmN" secondAttribute="bottom" constant="153" id="R6Z-EG-9Rg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T81-8U-1W4" secondAttribute="trailing" constant="68" id="RzU-4M-bdd"/>
+                            <constraint firstItem="s9e-3v-re0" firstAttribute="top" secondItem="zMQ-TG-OWv" secondAttribute="bottom" constant="45" id="SlN-QW-UEI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T81-8U-1W4" secondAttribute="bottom" constant="118" id="Zg6-cy-mYH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="all_toogle" destination="BdM-RM-Nat" id="bxm-5K-tmp"/>
-                        <outlet property="side_picker" destination="jsZ-KG-Kga" id="6Ro-to-7vD"/>
+                        <outlet property="HomePage" destination="8bC-Xf-vdC" id="x8V-0x-s1B"/>
+                        <outlet property="btn_down" destination="s9e-3v-re0" id="MrT-fY-AC0"/>
+                        <outlet property="btn_up" destination="zMQ-TG-OWv" id="gFb-xk-L1n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="gZP-cM-idT">
+                    <rect key="frame" x="0.0" y="-1" width="131" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                </segmentedControl>
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="93.103448275862078"/>
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.down" catalog="system" width="120" height="128"/>
-        <image name="arrow.up" catalog="system" width="120" height="128"/>
+        <image name="down" width="64" height="64"/>
+        <image name="stop.circle" catalog="system" width="128" height="121"/>
+        <image name="up" width="64" height="64"/>
     </resources>
 </document>
