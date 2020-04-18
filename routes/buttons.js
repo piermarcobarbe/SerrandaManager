@@ -131,15 +131,5 @@ router.get('/:id/status/down', function (req, res, next) {
     res.send(JSON.stringify(button.activePin));
 });
 
-router.get('/:id/status/stop', function (req, res, next) {
-    let button = myConfig[req.params.id];
-    if(button === undefined) return res.sendStatus(400);
-
-    myConfig[req.params.id] = button.stop();
-    checkAutoStopTimeout();
-    res.send(JSON.stringify(button.activePin));
-});
-
-
 
 module.exports = router;
