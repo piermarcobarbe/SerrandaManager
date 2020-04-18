@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47F9CB38D927D45E02E6DCCB /* libPods-SerrandaManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5168143691C884686C56572C /* libPods-SerrandaManager.a */; };
 		4CE28613243F3EB20028B773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE28612243F3EB20028B773 /* AppDelegate.swift */; };
 		4CE28615243F3EB20028B773 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE28614243F3EB20028B773 /* SceneDelegate.swift */; };
 		4CE28617243F3EB20028B773 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE28616243F3EB20028B773 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 		4CE28622243F3EB30028B773 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE28620243F3EB30028B773 /* LaunchScreen.storyboard */; };
 		4CE2862D243F3EB30028B773 /* SerrandaManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2862C243F3EB30028B773 /* SerrandaManagerTests.swift */; };
 		4CE28638243F3EB30028B773 /* SerrandaManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE28637243F3EB30028B773 /* SerrandaManagerUITests.swift */; };
+		5D311BC270BB035E7C266ECB /* libPods-SerrandaManager-SerrandaManagerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D008B9549D2444FEB9B65BF5 /* libPods-SerrandaManager-SerrandaManagerUITests.a */; };
+		E2B3C5988E323FBAF6922CA7 /* libPods-SerrandaManagerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C234C028B2CE35C3E9A659 /* libPods-SerrandaManagerTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0099702FE4D25CBAF9651E1E /* Pods-SerrandaManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerrandaManagerTests.release.xcconfig"; path = "Target Support Files/Pods-SerrandaManagerTests/Pods-SerrandaManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		1CE8FC906CFBA734C8A23D92 /* Pods-SerrandaManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerrandaManager.release.xcconfig"; path = "Target Support Files/Pods-SerrandaManager/Pods-SerrandaManager.release.xcconfig"; sourceTree = "<group>"; };
+		44D9408F7346E163499E3BCB /* Pods-SerrandaManager-SerrandaManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerrandaManager-SerrandaManagerUITests.debug.xcconfig"; path = "Target Support Files/Pods-SerrandaManager-SerrandaManagerUITests/Pods-SerrandaManager-SerrandaManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4CE2860F243F3EB20028B773 /* SerrandaManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SerrandaManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE28612243F3EB20028B773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CE28614243F3EB20028B773 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +58,12 @@
 		4CE28637243F3EB30028B773 /* SerrandaManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerrandaManagerUITests.swift; sourceTree = "<group>"; };
 		4CE28639243F3EB30028B773 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CE28645243F3EC70028B773 /* SerrandaManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SerrandaManager.entitlements; sourceTree = "<group>"; };
+		5168143691C884686C56572C /* libPods-SerrandaManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SerrandaManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5335906A52668922816EE348 /* Pods-SerrandaManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerrandaManagerTests.debug.xcconfig"; path = "Target Support Files/Pods-SerrandaManagerTests/Pods-SerrandaManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5663B310265CC8391A31F255 /* Pods-SerrandaManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerrandaManager.debug.xcconfig"; path = "Target Support Files/Pods-SerrandaManager/Pods-SerrandaManager.debug.xcconfig"; sourceTree = "<group>"; };
+		64C234C028B2CE35C3E9A659 /* libPods-SerrandaManagerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SerrandaManagerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		729AEF7897AABF3BABE0CF64 /* Pods-SerrandaManager-SerrandaManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SerrandaManager-SerrandaManagerUITests.release.xcconfig"; path = "Target Support Files/Pods-SerrandaManager-SerrandaManagerUITests/Pods-SerrandaManager-SerrandaManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D008B9549D2444FEB9B65BF5 /* libPods-SerrandaManager-SerrandaManagerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SerrandaManager-SerrandaManagerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47F9CB38D927D45E02E6DCCB /* libPods-SerrandaManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2B3C5988E323FBAF6922CA7 /* libPods-SerrandaManagerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D311BC270BB035E7C266ECB /* libPods-SerrandaManager-SerrandaManagerUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +101,8 @@
 				4CE2862B243F3EB30028B773 /* SerrandaManagerTests */,
 				4CE28636243F3EB30028B773 /* SerrandaManagerUITests */,
 				4CE28610243F3EB20028B773 /* Products */,
+				9436B0A8D7280653F5B1AE04 /* Pods */,
+				83A335903F38F0ABAD12E62F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +150,30 @@
 			path = SerrandaManagerUITests;
 			sourceTree = "<group>";
 		};
+		83A335903F38F0ABAD12E62F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5168143691C884686C56572C /* libPods-SerrandaManager.a */,
+				D008B9549D2444FEB9B65BF5 /* libPods-SerrandaManager-SerrandaManagerUITests.a */,
+				64C234C028B2CE35C3E9A659 /* libPods-SerrandaManagerTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9436B0A8D7280653F5B1AE04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5663B310265CC8391A31F255 /* Pods-SerrandaManager.debug.xcconfig */,
+				1CE8FC906CFBA734C8A23D92 /* Pods-SerrandaManager.release.xcconfig */,
+				44D9408F7346E163499E3BCB /* Pods-SerrandaManager-SerrandaManagerUITests.debug.xcconfig */,
+				729AEF7897AABF3BABE0CF64 /* Pods-SerrandaManager-SerrandaManagerUITests.release.xcconfig */,
+				5335906A52668922816EE348 /* Pods-SerrandaManagerTests.debug.xcconfig */,
+				0099702FE4D25CBAF9651E1E /* Pods-SerrandaManagerTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +181,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CE2863C243F3EB30028B773 /* Build configuration list for PBXNativeTarget "SerrandaManager" */;
 			buildPhases = (
+				11C2E1056020A29DE8705A0C /* [CP] Check Pods Manifest.lock */,
 				4CE2860B243F3EB20028B773 /* Sources */,
 				4CE2860C243F3EB20028B773 /* Frameworks */,
 				4CE2860D243F3EB20028B773 /* Resources */,
@@ -157,6 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CE2863F243F3EB30028B773 /* Build configuration list for PBXNativeTarget "SerrandaManagerTests" */;
 			buildPhases = (
+				1D91169CD27B8AF6E63B587C /* [CP] Check Pods Manifest.lock */,
 				4CE28624243F3EB30028B773 /* Sources */,
 				4CE28625243F3EB30028B773 /* Frameworks */,
 				4CE28626243F3EB30028B773 /* Resources */,
@@ -175,6 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CE28642243F3EB30028B773 /* Build configuration list for PBXNativeTarget "SerrandaManagerUITests" */;
 			buildPhases = (
+				2503AECCCD931A54AA826DA5 /* [CP] Check Pods Manifest.lock */,
 				4CE2862F243F3EB30028B773 /* Sources */,
 				4CE28630243F3EB30028B773 /* Frameworks */,
 				4CE28631243F3EB30028B773 /* Resources */,
@@ -258,6 +302,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11C2E1056020A29DE8705A0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SerrandaManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D91169CD27B8AF6E63B587C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SerrandaManagerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2503AECCCD931A54AA826DA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SerrandaManager-SerrandaManagerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4CE2860B243F3EB20028B773 /* Sources */ = {
@@ -438,6 +551,7 @@
 		};
 		4CE2863D243F3EB30028B773 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5663B310265CC8391A31F255 /* Pods-SerrandaManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SerrandaManager/SerrandaManager.entitlements;
@@ -459,6 +573,7 @@
 		};
 		4CE2863E243F3EB30028B773 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CE8FC906CFBA734C8A23D92 /* Pods-SerrandaManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SerrandaManager/SerrandaManager.entitlements;
@@ -480,6 +595,7 @@
 		};
 		4CE28640243F3EB30028B773 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5335906A52668922816EE348 /* Pods-SerrandaManagerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +618,7 @@
 		};
 		4CE28641243F3EB30028B773 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0099702FE4D25CBAF9651E1E /* Pods-SerrandaManagerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +641,7 @@
 		};
 		4CE28643243F3EB30028B773 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44D9408F7346E163499E3BCB /* Pods-SerrandaManager-SerrandaManagerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -544,6 +662,7 @@
 		};
 		4CE28644243F3EB30028B773 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 729AEF7897AABF3BABE0CF64 /* Pods-SerrandaManager-SerrandaManagerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,6 @@
+module Pods_SerrandaManager_SerrandaManagerUITests {
+  umbrella header "Pods-SerrandaManager-SerrandaManagerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

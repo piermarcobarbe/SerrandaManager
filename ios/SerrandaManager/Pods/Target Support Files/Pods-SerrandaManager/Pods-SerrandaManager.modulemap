@@ -1,0 +1,6 @@
+module Pods_SerrandaManager {
+  umbrella header "Pods-SerrandaManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

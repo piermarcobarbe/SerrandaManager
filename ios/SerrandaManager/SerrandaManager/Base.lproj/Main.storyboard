@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,13 +26,6 @@
                                     <segment title="Destra"/>
                                 </segments>
                             </segmentedControl>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down" translatesAutoresizingMaskIntoConstraints="NO" id="s9e-3v-re0">
-                                <rect key="frame" x="148" y="321" width="78" height="72"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="s9e-3v-re0" secondAttribute="height" multiplier="39:32" id="xYi-V3-UD6"/>
-                                    <constraint firstAttribute="width" secondItem="s9e-3v-re0" secondAttribute="height" multiplier="13:12" id="xeB-tO-VkU"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T81-8U-1W4">
                                 <rect key="frame" x="67" y="502" width="240" height="47"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,29 +41,25 @@
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="btnStop_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YSE-GZ-6kI"/>
+                                    <action selector="btnStop_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dzl-lb-xrb"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zMQ-TG-OWv">
-                                <rect key="frame" x="148" y="204" width="78" height="72"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="zMQ-TG-OWv" secondAttribute="height" multiplier="13:12" id="Io4-b2-0rX"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="up_big" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zMQ-TG-OWv">
+                                <rect key="frame" x="99" y="142" width="177" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="down_big" translatesAutoresizingMaskIntoConstraints="NO" id="s9e-3v-re0">
+                                <rect key="frame" x="99" y="320" width="177" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="mX4-Z4-vmN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2qG-cK-Wr7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zMQ-TG-OWv" secondAttribute="trailing" constant="149" id="CUs-3K-jGq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s9e-3v-re0" secondAttribute="trailing" constant="149" id="DTN-Ag-wBr"/>
                             <constraint firstItem="mX4-Z4-vmN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Fsy-IE-tEF"/>
-                            <constraint firstItem="s9e-3v-re0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="Iam-rO-gTv"/>
                             <constraint firstItem="mX4-Z4-vmN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KTe-sS-546"/>
-                            <constraint firstItem="zMQ-TG-OWv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="Q3L-ta-dte"/>
                             <constraint firstItem="T81-8U-1W4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="QFq-lT-RIm"/>
-                            <constraint firstItem="zMQ-TG-OWv" firstAttribute="top" secondItem="mX4-Z4-vmN" secondAttribute="bottom" constant="153" id="R6Z-EG-9Rg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T81-8U-1W4" secondAttribute="trailing" constant="68" id="RzU-4M-bdd"/>
-                            <constraint firstItem="s9e-3v-re0" firstAttribute="top" secondItem="zMQ-TG-OWv" secondAttribute="bottom" constant="45" id="SlN-QW-UEI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="T81-8U-1W4" secondAttribute="bottom" constant="118" id="Zg6-cy-mYH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -79,6 +68,7 @@
                         <outlet property="HomePage" destination="8bC-Xf-vdC" id="x8V-0x-s1B"/>
                         <outlet property="btn_down" destination="s9e-3v-re0" id="MrT-fY-AC0"/>
                         <outlet property="btn_up" destination="zMQ-TG-OWv" id="gFb-xk-L1n"/>
+                        <outlet property="windowTab" destination="mX4-Z4-vmN" id="G2F-6Q-HLX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -95,8 +85,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="down" width="64" height="64"/>
+        <image name="down_big" width="256" height="256"/>
         <image name="stop.circle" catalog="system" width="128" height="121"/>
-        <image name="up" width="64" height="64"/>
+        <image name="up_big" width="256" height="256"/>
     </resources>
 </document>

@@ -56,34 +56,24 @@
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>AlzaTutte</string>
 			<key>UIApplicationShortcutItemIconFile</key>
 			<string>up</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Alza Tutte</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
 			<string>Tira su tutte le tapparelle</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-			<key>UIApplicationShortcutItemUserInfo</key>
-			<dict>
-				<key>version</key>
-				<string>${APP_Version}</string>
-			</dict>
 		</dict>
 		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>AbbassaTutte</string>
 			<key>UIApplicationShortcutItemIconFile</key>
 			<string>down</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Abbassa Tutte</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
 			<string>Tira giù tutte le tapparelle</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-			<key>UIApplicationShortcutItemUserInfo</key>
-			<dict>
-				<key>version</key>
-				<string>${APP_Version}</string>
-			</dict>
 		</dict>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>

@@ -7,21 +7,23 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
    
     @IBOutlet var HomePage: UIView!
     @IBOutlet var btn_up: UIImageView!
     @IBOutlet var btn_down: UIImageView!
+    @IBOutlet var windowTab: UISegmentedControl!
     
-    let x = 148.0
-    let x_max = 231.0
+    let x = 99.0
+    let x_max = 276.0
     
-    let up_y = 204.5
-    let up_y_max = 281.0
+    let up_y = 142.0
+    let up_y_max = 276.0
     
-    let down_y = 326.0
-    let down_y_max = 403.0
+    let down_y = 320.0
+    let down_y_max = 454.0
     
     let touch_min_force = 0.05
     let touch_standard_force = 0.5
@@ -37,9 +39,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        set_borders(imageView: btn_up)
-        set_borders(imageView: btn_down)
+//        set_borders(imageView: btn_up)
+//        set_borders(imageView: btn_down)
         
+    }
+    
+    func get_window_tab_selected() -> Int{
+        return windowTab.selectedSegmentIndex
+    }
+    
+    func remove_border(imageView: UIImageView){
+        imageView.layer.borderWidth = 0.0
     }
     
     func set_borders(imageView: UIImageView){
@@ -106,12 +116,9 @@ class ViewController: UIViewController {
         }
     }
     
-    
     func stop_all(){
-        btn_up.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
-        btn_down.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
-        set_standard_border(imageView: btn_up)
-        set_standard_border(imageView: btn_down)
+        remove_border(imageView: btn_up)
+        remove_border(imageView: btn_down)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -119,40 +126,74 @@ class ViewController: UIViewController {
             stop_all()
         }
         
+        let index = get_window_tab_selected()
         if up == true {
-            set_standard_border(imageView: btn_down)
-            print("up")
+            set_button(valid: btn_up, not_valid: btn_down)
             if max_force == true{
-                print("\t 3d")
-                increase_border(imageView: btn_up)
+                up_all()
             }
-            if standard_force == true {
-                print("\t normal")
-                set_standard_border(imageView: btn_up)
+            else{
+                btn_up_click(index: index)
             }
-            btn_up.backgroundColor = UIColor(red: 139/255, green: 195/255, blue: 74/255, alpha: 1.0)
-            btn_down.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
         }
             
         if down == true{
-            set_standard_border(imageView: btn_up)
-            print("down")
+           set_button(valid: btn_down, not_valid: btn_up)
             if max_force == true{
-                print("\t 3d")
-                increase_border(imageView: btn_down)
+                down_all()
             }
-            if standard_force == true {
-                print("\t normal")
-                set_standard_border(imageView: btn_down)
+            else{
+                btn_down_click(index: index)
             }
-            btn_down.backgroundColor = UIColor(red: 139/255, green: 195/255, blue: 74/255, alpha: 1.0)
-            btn_up.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
         }
         
     }
     
+    func up_all(){
+        let url = "http://192.168.1.22:3000/buttons/all/status/up"
+        Alamofire.request(url).responseJSON(completionHandler: {response in
+            print(response)
+        })
+    }
+    
+    func down_all(){
+        let url = "http://192.168.1.22:3000/buttons/all/status/down"
+        Alamofire.request(url).responseJSON(completionHandler: {response in
+            print(response)
+        })
+    }
+    
+    func btn_up_click(index: Int){
+        let url = "http://192.168.1.22:3000/buttons/\(index)/status/up"
+        Alamofire.request(url).responseJSON(completionHandler: {response in
+            print(response)
+        })
+    }
+    
+    func btn_down_click(index: Int){
+        let url = "http://192.168.1.22:3000/buttons/\(index)/status/down"
+        Alamofire.request(url).responseJSON(completionHandler: {response in
+            print(response)
+        })
+    }
+    
+    func set_button(valid: UIImageView, not_valid: UIImageView){
+        remove_border(imageView: not_valid)
+        if max_force == true{
+            increase_border(imageView: valid)
+        }
+        if standard_force == true {
+            set_standard_border(imageView: valid)
+        }
+    }
+    
     @IBAction func btnStop_TouchUpInside(_ sender: Any) {
         stop_all()
+        
+        let url = "http://192.168.1.22:3000/buttons/all/status/stop"
+       
+        Alamofire.request(url).responseJSON(completionHandler: {(response) in
+                       print(response) })
     }
     
 }
